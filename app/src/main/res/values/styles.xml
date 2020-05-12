@@ -3,6 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowBackground">#423C3C</item>
         <item name = "windowActionBar">false</item>
         <item name = "windowNoTitle">true</item>
         <item name="colorPrimary">#000000</item>
@@ -11,9 +12,18 @@
 
     </style>
 
+    <style name="TextAppearance44">
+        <item name="android:textColor">#F8F8F8</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+
     <style name="AppTheme.NoActionBar">
+        <item name="android:windowBackground">#ffffff</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textColorSecondary">#eeeeee</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

@@ -10,6 +10,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.TextAppearanceSpan;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -39,7 +42,31 @@ public class LoadingActivity extends AppCompatActivity implements NavigationView
         setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu menu = navigationView.getMenu();
+
+        MenuItem conven= menu.findItem(R.id.conven);
+        SpannableString s = new SpannableString(conven.getTitle());
+        s.setSpan(new TextAppearanceSpan(this, R.style.TextAppearance44), 0, s.length(), 0);
+        conven.setTitle(s);
+
+
+        MenuItem conven2= menu.findItem(R.id.conven2);
+        SpannableString s1 = new SpannableString(conven2.getTitle());
+        s1.setSpan(new TextAppearanceSpan(this, R.style.TextAppearance44), 0, s1.length(), 0);
+        conven2.setTitle(s1);
+
+
+        MenuItem conven3= menu.findItem(R.id.conven3);
+        SpannableString s2 = new SpannableString(conven3.getTitle());
+        s2.setSpan(new TextAppearanceSpan(this, R.style.TextAppearance44), 0, s2.length(), 0);
+        conven3.setTitle(s2);
+
+
+        MenuItem conven4= menu.findItem(R.id.conven4);
+        SpannableString s3 = new SpannableString(conven4.getTitle());
+        s3.setSpan(new TextAppearanceSpan(this, R.style.TextAppearance44), 0, s3.length(), 0);
+        conven4.setTitle(s3);
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
